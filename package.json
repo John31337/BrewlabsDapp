@@ -1,17 +1,9 @@
 {
-  "name": "argon-dashboard-mui",
+  "name": "brewlab_dapp",
   "version": "3.0.0",
   "author": "Creative Tim",
   "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
   "description": "React version of Argon Dashboard 2 by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/argon-dashboard-material-ui/",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/argon-dashboard-material-ui/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-dashboard-material-ui.git"
-  },
   "engines": {
     "node": "14 || 15 || 16",
     "npm": ">=6"
