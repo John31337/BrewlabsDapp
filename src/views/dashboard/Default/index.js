@@ -5,14 +5,12 @@ import { Grid, Box } from '@mui/material';
 import MuiTypography from '@mui/material/Typography';
 import Select, { components } from 'react-select';
 import TradingViewWidget from './TradingViewWidget';
+import StakingButton from './StakingButton';
+import YieldButton from './YieldButton';
 
 // project imports
-import EarningCard from './EarningCard';
 import PopularCard from './PopularCard';
-import TotalOrderLineChartCard from './TotalOrderLineChartCard';
-import TotalIncomeDarkCard from './TotalIncomeDarkCard';
-import TotalIncomeLightCard from './TotalIncomeLightCard';
-import TotalGrowthBarChart from './TotalGrowthBarChart';
+import DescriptionCard from './DescriptionCard';
 import { gridSpacing } from 'store/constant';
 
 import MgIcon from '../../../assets/images/icons/earning.svg';
@@ -231,10 +229,16 @@ const Dashboard = () => {
                                 <PopularCard isLoading={isLoading} />
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalIncomeDarkCard isLoading={isLoading} />
+                                <DescriptionCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ...." />
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <TotalIncomeLightCard isLoading={isLoading} />
+                                <StakingButton available={false} />
+                            </Grid>
+                            <Grid item sm={6} xs={12} md={6} lg={12}>
+                                <YieldButton available={true} name={'Yield Farm Available'} category={0} />
+                            </Grid>
+                            <Grid item sm={6} xs={12} md={6} lg={12}>
+                                <YieldButton available={true} name={'Add liquidity to BREWLABS-BNB'} category={1} />
                             </Grid>
                         </Grid>
                     </Grid>

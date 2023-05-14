@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
+import { useTheme, styled } from '@mui/material/styles';
 import { Avatar, Button, CardActions, CardContent, Divider, Grid, Menu, MenuItem, Typography } from '@mui/material';
 
 // project imports
@@ -18,6 +18,13 @@ import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutl
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
 // ==============================|| DASHBOARD DEFAULT - POPULAR CARD ||============================== //
+const Card = styled(MainCard)(({ theme }) => ({
+    backgroundColor: '#2f2f31',
+    color: '#fff',
+    border: '1px solid #89888a',
+    overflow: 'hidden',
+    position: 'relative'
+}));
 
 const PopularCard = ({ isLoading }) => {
     const theme = useTheme();
@@ -37,13 +44,13 @@ const PopularCard = ({ isLoading }) => {
             {isLoading ? (
                 <SkeletonPopularCard />
             ) : (
-                <MainCard content={false}>
+                <Card content={false}>
                     <CardContent>
                         <Grid container spacing={gridSpacing}>
                             <Grid item xs={12}>
                                 <Grid container alignContent="center" justifyContent="space-between">
                                     <Grid item>
-                                        <Typography variant="h4">Popular Stocks</Typography>
+                                        <Typography variant="h4">Swap</Typography>
                                     </Grid>
                                     <Grid item>
                                         <MoreHorizOutlinedIcon
@@ -296,7 +303,7 @@ const PopularCard = ({ isLoading }) => {
                             <ChevronRightOutlinedIcon />
                         </Button>
                     </CardActions>
-                </MainCard>
+                </Card>
             )}
         </>
     );
